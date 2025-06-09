@@ -6,6 +6,7 @@ node_modules/
 
 # Node-RED credentials
 flows_cred.json
+*_cred.json
 
 # Backup files
 *.backup
@@ -15,3 +16,12 @@ flows_cred.json
 
 # VSCode settings
 .vscode/
+
+# Node-RED specific
+flows-*.json
+.config.json
+.sessions.json
+
+# Test output files
+output.txt
+test-*.txt

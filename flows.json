@@ -27,6 +27,46 @@
         "x": 320,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "file1",
+        "type": "file",
+        "z": "flow1",
+        "name": "log to file",
+        "filename": "output.txt",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 500,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "function1",
+        "type": "function",
+        "z": "flow1",
+        "name": "format message",
+        "func": "msg.payload = 'Payload: ' + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 140,
+        "wires": [["file1"]]
+    },
+    {
+        "id": "inject2",
+        "type": "inject",
+        "z": "flow1",
+        "name": "manual hello",
+        "props": [{"p":"payload"}],
+        "repeat": "",
+        "topic": "",
+        "payload": "Hello World!",
+        "payloadType": "str",
+        "x": 150,
+        "y": 140,
+        "wires": [["function1"]]
     }
 ]
 
