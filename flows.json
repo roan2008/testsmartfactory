@@ -1,0 +1,32 @@
+[
+    {
+        "id": "inject1",
+        "type": "inject",
+        "z": "flow1",
+        "name": "every minute",
+        "props": [{"p":"payload"}],
+        "repeat": "60",
+        "topic": "",
+        "payload": "hello",
+        "payloadType": "str",
+        "x": 150,
+        "y": 80,
+        "wires": [["debug1"]]
+    },
+    {
+        "id": "debug1",
+        "type": "debug",
+        "z": "flow1",
+        "name": "log",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 320,
+        "y": 80,
+        "wires": []
+    }
+]
+

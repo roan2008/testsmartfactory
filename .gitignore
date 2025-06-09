@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Node-RED credentials
+flows_cred.json
+
+# Backup files
+*.backup
+
+# Local runtime files
+*.log
+
+# VSCode settings
+.vscode/
